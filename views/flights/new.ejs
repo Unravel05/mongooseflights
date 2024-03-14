@@ -1,0 +1,50 @@
+<%- include('../partials/header')%>
+
+<h2>Enter a Flight</h2>
+<form action="/flights" method="POST">
+  <label>Airline:
+    <select name="airline">
+      <option value="American Airlines">American Airlines</option>
+      <option value="Southwest">Southwest</option>
+      <option value="United Airlines">United Airlines</option>
+      <option value="Spirit">Spirit</option>
+      <option value="Delta">Delta</option>
+    </select>
+  </label><br>
+  <label>Airport:
+    <select name="airport">
+      <option value="AUS">AUS</option>
+      <option value="DFW">DFW</option>
+      <option value="DEN">DEN</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+    </select>
+  </label><br>
+  <label>Departure:
+    <input type="datetime-local" name="departure">
+  </label><br>
+  <label>Arrival:
+    <input type="datetime-local" name="arrival">
+  </label><br>
+  <label>Destination:
+    <select name="destination">
+      <option value="AUS">AUS</option>
+      <option value="DFW">DFW</option>
+      <option value="DEN">DEN</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+    </select>
+  </label><br>
+  <label>Flight Id:
+    <input type="number" name="flightId">
+  </label><br>
+  <label>Landed:
+    <input type="checkbox" name="landed" checked>
+  </label><br> <label>Clean:
+    <input type="checkbox" name="clean" checked>
+  </label><br>
+  <button type="submit">Add a Flight</button>
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer')%>
